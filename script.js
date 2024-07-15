@@ -1,5 +1,8 @@
 "use strict";
 
+let humanScore = 0;
+let computerScore = 0;
+
 const getComputerChoice = function () {
   const randomNum = Math.trunc(Math.random() * 3 + 1);
 
@@ -7,8 +10,6 @@ const getComputerChoice = function () {
   if (randomNum === 2) return "Paper";
   if (randomNum === 3) return "Scissors";
 };
-
-getComputerChoice();
 
 const getHumanChoice = function () {
   const userChoice = prompt("Enter your choice:");
@@ -23,4 +24,6 @@ const getHumanChoice = function () {
   else return "Invalid Choice";
 };
 
-console.log(getHumanChoice());
+getComputerChoice();
+
+console.log(humanScore, computerScore);
