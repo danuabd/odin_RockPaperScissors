@@ -24,72 +24,72 @@ const getHumanChoice = function () {
   else return "Invalid Choice";
 };
 
-const playRound = function (humanChoice, computerChoice) {
-  // when draw
-  if (humanChoice === computerChoice) {
-    console.log("Draw");
-    return;
-  }
+// play game
+const playGame = function () {
+  const humanChoice = getHumanChoice();
+  const computerChoice = getComputerChoice();
+  const playRound = function (humanChoice, computerChoice) {
+    // when draw
+    if (humanChoice === computerChoice) {
+      console.log("Draw");
+      return;
+    }
 
-  //   rock vs paper
-  if (humanChoice === "rock" && computerChoice === "paper") {
-    console.log("You Win! rock beats paper.");
-    humanScore++;
-  }
+    //   rock vs paper
+    if (humanChoice === "rock" && computerChoice === "paper") {
+      console.log("You Win! rock beats paper.");
+      humanScore++;
+    }
 
-  //   paper vs rock
-  if (humanChoice === "paper" && computerChoice === "rock") {
-    console.log("You Lose! rock beats paper.");
-    computerScore++;
-  }
+    //   paper vs rock
+    if (humanChoice === "paper" && computerChoice === "rock") {
+      console.log("You Lose! rock beats paper.");
+      computerScore++;
+    }
 
-  //   rock vs scissor
-  if (
-    humanChoice === "rock" &&
-    (computerChoice === "scissor" || computerChoice === "scissors")
-  ) {
-    console.log("You Win! Rock beats Scissors.");
-    humanScore++;
-  }
+    //   rock vs scissor
+    if (
+      humanChoice === "rock" &&
+      (computerChoice === "scissor" || computerChoice === "scissors")
+    ) {
+      console.log("You Win! Rock beats Scissors.");
+      humanScore++;
+    }
 
-  //   scissor vs rock
-  if (
-    computerChoice === "rock" &&
-    (humanChoice === "scissor" || humanChoice === "scissors")
-  ) {
-    console.log("You Lose! Rock beats Scissors.");
-    computerScore++;
-  }
+    //   scissor vs rock
+    if (
+      computerChoice === "rock" &&
+      (humanChoice === "scissor" || humanChoice === "scissors")
+    ) {
+      console.log("You Lose! Rock beats Scissors.");
+      computerScore++;
+    }
 
-  //   paper vs scissor
-  if (
-    humanChoice === "paper" &&
-    (computerChoice === "scissors" || computerChoice === "scissor")
-  ) {
-    console.log("You Lose! Scissors beat Paper.");
-    computerScore++;
-  }
+    //   paper vs scissor
+    if (
+      humanChoice === "paper" &&
+      (computerChoice === "scissors" || computerChoice === "scissor")
+    ) {
+      console.log("You Lose! Scissors beat Paper.");
+      computerScore++;
+    }
 
-  //   scissor vs paper
-  if (
-    computerChoice === "paper" &&
-    (humanChoice === "scissors" || humanChoice === "scissor")
-  ) {
-    console.log("You Win! Scissors beat Paper.");
-    humanScore++;
-  }
+    //   scissor vs paper
+    if (
+      computerChoice === "paper" &&
+      (humanChoice === "scissors" || humanChoice === "scissor")
+    ) {
+      console.log("You Win! Scissors beat Paper.");
+      humanScore++;
+    }
+  };
+
+  playRound(humanChoice, computerChoice);
 };
 
-// rock paper
-// paper rock
-
-// rock scissor
-// scissor rock
-
-// paper scissor
-// scissor paper
-
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
-
-playRound(humanChoice, computerChoice);
+// call playGame 5 times
+playGame();
+playGame();
+playGame();
+playGame();
+playGame();
