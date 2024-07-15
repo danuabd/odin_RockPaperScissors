@@ -9,3 +9,18 @@ const getComputerChoice = function () {
 };
 
 getComputerChoice();
+
+const getHumanChoice = function () {
+  const userChoice = prompt("Enter your choice:");
+
+  if (
+    userChoice === "rock" ||
+    userChoice === "paper" ||
+    userChoice === "scissors" ||
+    userChoice === "scissor"
+  )
+    return userChoice;
+  else return "Invalid Choice";
+};
+
+console.log(getHumanChoice());
