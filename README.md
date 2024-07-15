@@ -1,2 +1,2 @@
-# odin_RockPaperScissors
-Rock Paper Scissors game.
+# Rock Paper Scissors (an Odin project)
+Rock Paper Scissors game, developed for an assignment of the Odin project.
