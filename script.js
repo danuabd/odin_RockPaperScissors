@@ -12,7 +12,7 @@ const getComputerChoice = function () {
 };
 
 const getHumanChoice = function () {
-  const userChoice = prompt("Enter your choice:");
+  const userChoice = prompt("Enter your choice:").toLowerCase();
 
   if (
     userChoice === "rock" ||
@@ -24,6 +24,4 @@ const getHumanChoice = function () {
   else return "Invalid Choice";
 };
 
-getComputerChoice();
-
-console.log(humanScore, computerScore);
+const playRound = function (humanChoice, computerChoice) {};
